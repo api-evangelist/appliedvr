@@ -1,8 +1,31 @@
 aid: appliedvr
 name: AppliedVR
-description: AppliedVR is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  AppliedVR is a virtual reality therapeutics company that combines immersive
+  technology with proven cognitive behavioral and behavioral-science techniques
+  to treat medical conditions, with a focus on chronic pain. Its lead product,
+  RelieVRx, is the first FDA-authorized prescription VR device for chronic lower
+  back pain, delivering automated, self-administered cognitive behavioral therapy
+  in the patient's home. AppliedVR also offers the SustainVR and ITx immersive
+  therapeutics platform and the AVR Pathway patient-support system, and validates
+  its products through clinical academic research. The company operates as a
+  regulated digital-therapeutics / medical-device business rather than a
+  developer-facing API platform, so it publishes no public API, SDK, or developer
+  portal at this time. This profile was surfaced as a Techstars portfolio company
+  and added to the API Evangelist network for enrichment.
 url: https://raw.githubusercontent.com/api-evangelist/appliedvr/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://avrassets.appliedvr.io/images/logos/avr-logo-blue.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -14,6 +37,12 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
+- Digital Therapeutics
+- Virtual Reality
+- Healthcare
+- Medical Device
+- Chronic Pain
+- Behavioral Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +50,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/appliedvr-domain-security.yml
 - type: Website
   url: https://appliedvr.io/
+- type: Support
+  url: https://www.relievrx.com/support
+- type: PrivacyPolicy
+  url: https://appliedvr.io/privacy
+- type: Compliance
+  url: https://appliedvr.io/compliance
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
