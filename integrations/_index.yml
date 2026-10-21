@@ -39,3 +39,35 @@
       not withdrawals, so lapsed is always false
   status: not-a-workflow
   arazzo: null
+- slug: appliedvr-clinicaltrials-gov-industry-trial-sponsors-and-collaborators
+  label: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  partner_name: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  category: Interventional trial sponsor / collaborator
+  type: register
+  channel: standard-directory
+  evidence: https://clinicaltrials.gov/study/NCT05263037
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, started >= 2021-01-01, industry lead sponsor or collaborator)
+    standard: null
+    spec_file: null
+    role: trial-lead-sponsor
+    registered_name: AppliedVR Inc.
+    matched_domain: appliedvr.io
+    matched_by: domain
+    lead_sponsor: true
+    active_trial: true
+    latest_start: '2022-01-31'
+    trials_sample:
+    - NCT05263037
+    - NCT04010266
+    - NCT04139564
+    signal_note: 'PARTICIPATION only (a trial is not an approval): lead_sponsor, active_trial and latest_start are
+      per-edge signals; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q140045737 'AppliedVR Inc. (United States)' P856 https://appliedvr.io
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null

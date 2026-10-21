@@ -35,6 +35,38 @@ edges:
       not withdrawals, so lapsed is always false
   detected_by: sweep-digital-therapeutics.py
   first_seen: '2026-10-20'
+- partner_name: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://clinicaltrials.gov/study/NCT05263037
+  category: Interventional trial sponsor / collaborator
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, started >= 2021-01-01, industry lead sponsor or collaborator)
+    standard: null
+    spec_file: null
+    role: trial-lead-sponsor
+    registered_name: AppliedVR Inc.
+    matched_domain: appliedvr.io
+    matched_by: domain
+    lead_sponsor: true
+    active_trial: true
+    latest_start: '2022-01-31'
+    trials_sample:
+    - NCT05263037
+    - NCT04010266
+    - NCT04139564
+    signal_note: 'PARTICIPATION only (a trial is not an approval): lead_sponsor, active_trial and latest_start are
+      per-edge signals; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q140045737 'AppliedVR Inc. (United States)' P856 https://appliedvr.io
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-clinical-trial-sponsors.py
+  first_seen: '2026-10-21'
 generated: '2026-10-20'
 method: searched
 source:
@@ -45,3 +77,7 @@ checked:
 - https://api.fda.gov/device/510k.json?search=product_code:PWE+product_code:QFT+product_code:QMY+product_code:QMZ+product_code:QQU+product_code:QRA+product_code:QVO+product_code:QWI+product_code:QXC+product_code:SAP+product_code:SBN+product_code:SCP+product_code:SEE&limit=100
 - https://diga.bfarm.de/de/verzeichnis
 - https://mhealthbelgium.be/apps
+- https://api.fda.gov/drug/drugsfda.json
+- https://clinicaltrials.gov/api/v2/studies
+- https://euclinicaltrials.eu/ctis-public/search
+- https://www.cdisc.org/members/search
